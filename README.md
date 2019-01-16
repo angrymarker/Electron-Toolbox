@@ -1,5 +1,5 @@
 # Electron-Toolbox
-Electron Boilerplate built for a plug-in inspired toolbox
+The Electron-Toolbox is an Electron Boilerplate built for a plug-in inspired toolbox. This is considered in Beta, as this is a tool stripped down from a tool I've created and use on a daily basis. There are breadcrumbs of this everywhere, which lessens the "boilerplate"-ability of this tool.
 
 # Features
 Custom Windows-10 inspired Toolbar
