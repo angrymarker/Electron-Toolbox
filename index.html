@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CD Toolbox</title>
+    <!--	CSS	-->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="prerender" href="toolbox.html">
+    <script>
+    console.time('total')
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src="scripts/tools/libraries/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</head>
+
+<body>
+    <div id="fullloader">
+        <div id="loader"></div>
+        <h1 class="loadingtext">Loading Toolbox...</h1>
+    </div>
+    <div class="bgimg full" id="mainarea" hidden>
+    </div>
+    <script>
+    console.time('html')
+    var x = document.getElementById("mainarea");
+    var y = document.getElementById("fullloader");
+    var h = document.getElementsByTagName("head")[0];
+     x.innerHTML = '<div class="bgimg full" id="mainarea"> <!-- Header/Titlebar Area --> <header id="titlebar"> <div id="drag-region"> <div id="window-title"> <span><img alt="CD Toolbox Logo" src="images/cdtoolboxiconsmall.png"><label class="labelinside" for="logo" title="CD Toolbox Logo" id="title">CD Toolbox</label></span> </div> <div id="window-controls"> <div class="button" id="notif-button" onclick="shownotifs()" title="Show Notifications"> <span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="tofill" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg> </span><!-- <i class="material-icons" id="notifications">notifications</i>--></span> </div> <a href="Settings.html"> <div class="button" id="settings-button" title="Settings menu"> <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="none" d="M0 0h20v20H0V0z"/><path class="tofill" d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/></svg> <!-- <i class="material-icons">settings</i> --></span> </div> </a> <div class="button" id="min-button" title="Minimize"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="tofill" d="M6 19h12v2H6z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg> <!-- <i class="material-icons">minimize</i> --></span> </div> <div class="button" id="max-button" title="Maximize"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path class="tofill" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg> <!-- <i class="material-icons">fullscreen</i> --></span> </div> <div class="button" id="restore-button" title="Restore"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path class="tofill" d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg> <!-- <i class="material-icons">fullscreen_exit</i> --></span> </div> <div class="button" id="close-button" title="Close"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="tofill" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg> <!-- <i class="material-icons">close</i> --></span> </div> </div> </div> </header> <div class="full" id="tabs"> <!-- Tab Area --> <ul class="tabs" title="Team Selection"> <li class="tab-link current" data-tab="tab-1" id="tab-cd" title="Content Development Tools">Content Development</li> <li class="tab-link" data-tab="tab-2" id="tab-naehas" title="Platform Tools">Platform</li> <li class="tab-link" data-tab="tab-3" id="tab-other" title="Miscellaneous Tools">Other</li> </ul> <!-- Content Development Page Tab --> <div class="topleftoption tab-content current full" id="tab-1"> <p> <label class="basiclabel" for="applicationdropdown-CD" title="Selected Application">Application:</label> <select class="dropdown" id="applicationdropdown-CD" title="Select a CD Application"> <option disabled selected value=""> Select app... </option> </select> </p> <form> <div id="CD-Tool-Area"></div> </form> </div> <!-- Naehas Page Tab --> <div class="topleftoption tab-content full" id="tab-2"> <p> <label class="basiclabel" for="applicationdropdown-Naehas" title="Selected Application">Application:</label> <select class="dropdown" id="applicationdropdown-Naehas" title="Select a platform-centric tool"> <option disabled selected value=""> Select app... </option></select> </p> <p></p> <form> <div id="Naehas-Tool-Area"></div> </form> <p></p> </div> <!-- Other Page Tab --> <div class="topleftoption tab-content full" id="tab-3"> <p> <label class="basiclabel" for="applicationdropdown-Other" title="Selected Application">Application:</label> <select class="dropdown" id="applicationdropdown-Other" title="Select Misc. Tool"> <option disabled selected value=""> Select app... </option></select> </p> <form> <div id="Other-Tool-Area"></div> </form> </div> </div> <!-- Footer --> <div class="bottomleft padding-large"> <button class="basicbutton" id="JobFinder" name="JobFinder" onclick="RunJobFinderEXE()" title="Open Job Finder" type="button">Job Finder App</button> <p> <progress class="progress" id="progress" max="100" title="Status" value="0"></progress><span class="basiclabel" id="progresslabel" title="Status">Ready...</span></p> </div> </div> <a href="#ex3" rel="modal:open" id="erroropener"></a> <div id="ex3" class="modal"><p id="resultprompt"></p><a href="#" rel="modal:close">Close</a></div> <!-- Notification Area --> <div id="snackbar" title="Notification Menu"> <ul id="allnotifications"> <li id="defaultnotif">No New Notifications...</li> </ul><span class="clearall" id="clearall" title="Clear All Notifications">Clear All</span> </div>';
+    console.timeEnd('html');
+    console.time('req');
+    var s = null;
+    s = document.createElement('script');
+    s.setAttribute('src', "scripts/tools/libraries/requirefixer.js");
+    s.onload = function() {
+    console.timeEnd('req');
+    	loadwh();
+    }
+    h.appendChild(s);
+    function loadwh()
+    {
+    console.time('wh');
+    	var wh = null;
+	    wh = document.createElement('script');
+		wh.setAttribute('src', "scripts/windowhandling3.js");
+	    wh.onload = function() {
+	    	$(x).fadeIn();
+    		$(y).fadeOut();
+    		console.timeEnd('wh');
+    		console.timeEnd('total');
+	    }
+    	h.appendChild(wh);
+    }
+    </script>
+</body>
+
+</html>

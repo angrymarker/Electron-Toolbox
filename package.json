@@ -1,0 +1,27 @@
+{
+  "name": "cdtoolbox",
+  "version": "1.0.0",
+  "description": "Single Deliverable for Multiple tools",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "author": "Jake Austin, Salbih Mustafa",
+  "license": "ISC",
+  "dependencies": {
+    "electron-settings": "^3.2.0",
+    "jquery": "^3.3.1",
+    "perfy": "^1.1.5",
+    "username": "^3.0.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^2.0.7",
+    "electron-packager": "^12.1.0"
+  }
+}

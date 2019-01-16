@@ -1,0 +1,808 @@
+/*---Variables---*/
+
+:root {
+	--main-txt-color: #000;
+	--main-bg-color: #FFF;
+	--main-bg-accent-color: #CCCCCC;
+	--main-bg-image: '';
+}
+/*---List scrollable---*/
+#first {
+    position: fixed;
+}
+#firstv2 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+ul#nav {
+    width: 700px;
+    height: 175px;
+    line-height: 2em;
+    border: 3px solid #ccc;
+    padding: 0;
+    margin: 0;
+    margin-left: 23px;
+    overflow: scroll;
+    overflow-x: hidden;
+    resize: both;
+}
+.row:hover {
+    background-color: var(--main-bg-accent-color);
+}
+li:hover {
+    border-top: 1px solid #ccc;
+    background-color: var(--main-bg-accent-color);
+}
+/*---Global---*/
+
+button, input, select, textarea {
+	font: inherit;
+	margin: 0
+}
+.hidden {
+	display: none;
+}
+a {
+	color: var(--main-txt-color);
+	text-decoration: none;
+}
+
+body, html {
+	height: 100%;
+	color: var(--main-txt-color);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	height: 100%;
+	background-color: #a1af6c;
+}
+.bgimg {
+	background: var(--main-bg-color);
+	background-image: var(--main-bg-image);
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.full {
+	width: 100%;
+}
+.title {
+	font-size: 15pt;
+	padding-left: 10px;
+}
+.basiclabel {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.basiclabelright {
+	padding-right: 20px;
+	padding-left: 20px;
+    margin-right: 95px;
+}
+.labelinside {
+	padding-right: 10px;
+	padding-left: 5px;
+}
+.labelinsidepopup {
+	padding-right: 10px;
+}
+/*---Dropdowns---*/
+
+.dropdown {
+	background: transparent;
+	color: var(--main-txt-color);
+	padding-left: 5px;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+	cursor: pointer;
+}
+.dropdown:hover {
+	background: var(--main-bg-accent-color);
+}
+.dropdown:focus {
+	background: var(--main-bg-accent-color);
+}
+
+option {
+	background-color: var(--main-bg-accent-color);
+}
+/*---Buttons---*/
+
+.basicbutton:hover {
+	cursor: pointer;
+	background: var(--main-bg-accent-color);
+	box-shadow: 0 5px 15px var(--main-bg-accent-color);
+}
+.basicbutton:focus {
+	background: var(--main-bg-accent-color);
+}
+.basicbutton {
+	background: transparent;
+	border: 1px solid var(--main-txt-color);
+	color: var(--main-txt-color);
+	padding-right: 5px;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+	padding-left: 5px;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.basicbrowsebutton {
+	background: transparent;
+	border: 1px solid var(--main-txt-color);
+	color: var(--main-txt-color);
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	margin-top: 0px;
+	cursor: pointer;
+}
+/*---Inputs---*/
+
+.inputfield {
+	background: transparent;
+	border: none;
+	color: var(--main-txt-color);
+	border-bottom: 1px solid var(--main-txt-color);
+	padding-left: 10px;
+	margin-right: 10px;
+	width: 75%;
+}
+::placeholder {
+	color: var(--main-txt-color);
+	opacity: .7;
+}
+.inputfield:hover {
+	background: var(--main-bg-accent-color);
+}
+.inputfield:focus {
+	background: var(--main-bg-accent-color);
+}
+.smallinputfield {
+	background: transparent;
+	border: none;
+	color: var(--main-txt-color);
+	border-bottom: 1px solid var(--main-txt-color);
+	padding-left: 10px;
+	margin-right: 10px;
+	width: 55%;
+}
+.smallinputfield:hover {
+	background: var(--main-bg-accent-color);
+}
+.smallinputfield:focus {
+	background: var(--main-bg-accent-color);
+}
+.valueinputfield {
+	background: transparent;
+	border: none;
+	color: var(--main-txt-color);
+	border-bottom: 1px solid var(--main-txt-color);
+	padding-left: 10px;
+	margin-right: 10px;
+	width: 33%;
+}
+.valueinputfield:hover {
+	background: var(--main-bg-accent-color);
+}
+.valueinputfield:focus {
+	background: var(--main-bg-accent-color);
+}
+.jobinputfield {
+	background: transparent;
+	border: none;
+	color: var(--main-txt-color);
+	border-bottom: 1px solid var(--main-txt-color);
+	padding-left: 10px;
+	margin-right: 10px;
+}
+.jobinputfield:hover {
+	background: var(--main-bg-accent-color);
+}
+.jobinputfield:focus {
+	background: var(--main-bg-accent-color);
+}
+/*---Tabs---*/
+
+ul.tabs {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	position: absolute;
+	top: 55px;
+	left: 2.5%;
+	overflow: hidden;
+	border: 1px solid var(--main-txt-color);
+	background-color: transparent;
+}
+ul.tabs li {
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+ul.tabs li:hover {
+	opacity: 0.8;
+	background: var(--main-bg-accent-color);
+}
+ul.tabs li.current {
+	background: var(--main-bg-accent-color);
+}
+ul.tabs li.current:hover {
+	opacity: 1;
+}
+.tab-content {
+	display: none;
+	background: transparent;
+	padding: 15px;
+}
+.tab-content.current {
+	display: inherit;
+}
+/*---Position---*/
+
+.bottomleft {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+}
+.padding-large {
+	padding: 12px 24px!important
+}
+.windowhandlebuttons {
+	float: right;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.topleftoption {
+	position: absolute;
+	top: 90px;
+	left: 2.5%;
+}
+.popuptopleftoption {
+	position: absolute;
+	top: 30px;
+	left: 2.5%;
+}
+.rightalign {
+	float: right;
+	width: 20%;
+	margin-right: 0px;
+}
+.rightalignlower {
+	float: right;
+	width: 20%;
+	margin-right: 30px;
+}
+/*---CustomDropDown---*/
+
+.multiselect {
+	width: 200px;
+	padding-left: 20px;
+	z-index: -1;
+}
+.selectBox {
+	position: relative;
+}
+.selectBox select {
+	width: 100%;
+	font-weight: bold;
+}
+.overSelect {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#checkboxes {
+	display: none;
+	border: 1px solid var(--main-txt-color);
+}
+#checkboxes label {
+	display: block;
+}
+#checkboxes label:hover {
+	background-color: var(--main-bg-accent-color);
+}
+/* The switch - the box around the slider */
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 17px;
+	margin-left: 20px;
+}
+/* Hide default HTML checkbox */
+.switch:hover {
+	box-shadow: 0 5px 15px var(--main-bg-accent-color);
+}
+.switch:focus {
+	box-shadow: 0 5px 15px var(--main-bg-accent-color);
+}
+.switch input {
+	opacity: 0;
+}
+/* The slider */
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 13px;
+	width: 13px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+input:checked+.slider {
+	background-color: #2196F3;
+}
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+input:checked+.slider:before {
+	-webkit-transform: translateX(13px);
+	-ms-transform: translateX(13px);
+	transform: translateX(13px);
+}
+/* Rounded sliders */
+
+.slider.round {
+	border-radius: 17px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
+#box {
+	width: 90%;
+	height: 275px;
+	top: 195px;
+	left: 25px;
+	overflow: auto;
+	border: 1px solid var(--main-txt-color);
+	resize: both;
+}
+#boxforpreflight {
+	width: 65%;
+	height: 100%;
+	top: 175px;
+	left: 25px;
+	overflow: auto;
+	border: 1px solid var(--main-txt-color);
+	resize: both;
+}
+#onlineusers {
+	border: 1px solid var(--main-txt-color);
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 120px;
+	max-width: 60%;
+	margin-left: 20px;
+}
+.wysiwyg {
+	width: 75%;
+	min-height: 280px;
+	resize: both;
+}
+.interactivedeCSS {
+	width: 90%;
+	min-height: 380px;
+	resize: both;
+}
+/* test */
+
+#snackbar {
+	visibility: hidden;
+	/* Hidden by default. Visible on click */
+	min-width: 250px;
+	/* Set a default minimum width */
+	max-height: 400px;
+	margin-left: -125px;
+	/* Divide value of min-width by 2 */
+	background-color: var(--main-bg-accent-color);
+	/* Black background color */
+	color: var(--main-txt-color);
+	/* White text color */
+	text-align: left;
+	/* Centered text */
+	border-radius: 2px;
+	/* Rounded borders */
+	padding: 16px;
+	/* Padding */
+	position: fixed;
+	/* Sit on top of the screen */
+	z-index: 1;
+	/* Add a z-index if needed */
+	right: 5%;
+	/* Center the snackbar */
+	top: 45px;
+	/* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+	visibility: visible;
+	/* Show the snackbar */
+	/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+	-webkit-animation: fadein 0.5s;
+}
+#allnotifications li {
+	word-wrap: break-word;
+	max-width: 350px;
+}
+#allnotifications {
+	overflow: auto;
+	max-height: 350px;
+}
+#messages {
+	max-height: 500px;
+	overflow: auto;
+}
+#messages li {
+	word-wrap: break-word;
+	max-width: 75%;
+}
+#snackbar.hide {
+	visibility: hidden;
+	/* Show the snackbar */
+	/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+	-webkit-animation: fadeout 0.5s;
+}
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+	opacity: 0;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+.deletebutton {
+	float: right;
+	cursor: pointer;
+}
+.clearall {
+	padding-left: 35px;
+	cursor: pointer;
+	text-align: center;
+	/* Centered text */
+}
+/*--- badge ---*/
+
+.badge1 {
+	position: relative;
+}
+.badge1[data-badge]:after {
+	content: attr(data-badge);
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	font-size: .7em;
+	background: red;
+	color: white;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	border-radius: 50%;
+	box-shadow: 0 0 1px #333;
+}
+/*--- Titlebar ---*/
+
+#titlebar {
+	padding: 4px;
+	display: block;
+	position: fixed;
+	height: 32px;
+	width: calc(100% - 2px);
+	/*Compensate for body 1px border*/
+	background: var(--main-bg-accent-color);
+	color: var(--main-txt-color);
+}
+#titlebar #drag-region {
+	width: 100%;
+	height: 100%;
+	-webkit-app-region: drag;
+}
+#window-controls {
+	display: grid;
+	grid-template-columns: repeat(5, 46px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	font-family: "Segoe MDL2 Assets";
+	font-size: 10px;
+}
+#window-controls .button {
+	grid-row: 1 / span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+#window-controls #notif-button {
+	grid-column: 1;
+}
+#window-controls #settings-button {
+	grid-column: 2;
+}
+#window-controls #min-button {
+	grid-column: 3;
+}
+#window-controls #max-button, #window-controls #restore-button {
+	grid-column: 4;
+}
+#window-controls #close-button {
+	grid-column: 5;
+}
+#window-controls {
+	-webkit-app-region: no-drag;
+}
+#window-controls .button {
+	user-select: none;
+	cursor: default;
+	opacity: 0.8;
+}
+#window-controls .button:hover {
+	background: rgba(255, 255, 255, 0.2);
+	opacity: 1;
+	cursor: pointer;
+}
+#window-controls #close-button:hover {
+	background: #E81123;
+}
+#window-controls #restore-button {
+	display: none;
+}
+#titlebar #drag-region {
+	display: grid;
+	grid-template-columns: auto 138px;
+}
+#window-title {
+	grid-column: 1;
+	display: flex;
+	align-items: center;
+	font-family: "Segoe UI", sans-serif;
+	font-size: 18px;
+	margin-left: 8px;
+	overflow: hidden;
+}
+#window-title span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.5;
+}
+th.values {
+	width: 70%;
+}
+
+#progress:hover {
+	box-shadow: 0 5px 15px var(--main-bg-accent-color);
+}
+
+.inputerror {
+	color: red;
+	white-space: nowrap;
+	display: none;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+#JobFinder {
+	left: 390px;
+    position: fixed;
+    top: 55px;
+}
+
+/*	accordian	*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    white-space: pre;
+}
+#accordianarea {
+	width: 92%;
+    height: 360px;
+    overflow: auto;
+    resize: both;
+}
+i {
+	cursor: pointer;
+}
+.codeinput {
+    top: 10px;
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 100px;
+}
+#loader {
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #0058a7;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #000000;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #8098aa;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loadingtext {
+	position:absolute;
+	left:40%;
+	top:65%;
+	color: white;
+}
+
+/*Spacing in between checkbox and filenames*/
+[name~="location[]"] {
+    margin-right: 5px;
+} 
+
+#checkAllNone {
+	margin-right: 5px;
+}
+#inlineprogress {
+	width: 40px;
+    height: 5px;
+    margin: 0;
+    background-color: var(--main-txt-color);
+    position: relative;
+    animation-name: progressslide;
+    animation-duration: 1s;    
+    animation-fill-mode: forwards;
+}
+
+#inlineprogress-table {
+	width: 40px;
+    height: 5px;
+    margin: 0;
+    background-color: var(--main-txt-color);
+    position: relative;
+    animation-name: progressslide-table;
+    animation-duration: 3s;    
+    animation-fill-mode: forwards;
+}
+
+#inlineprogress-table-quick {
+	width: 40px;
+    height: 5px;
+    margin: 0;
+    background: var(--main-txt-color);
+    position: relative;
+    animation-name: progressslide-table;
+    animation-duration: 1s;    
+    animation-fill-mode: forwards;
+}
+
+@keyframes progressslide-table {
+    from {left: 1250px;}
+    to {left: -120px; background-color: var(--main-bg-accent-color);}
+}
+
+@keyframes progressslide {
+    from {left: 640px;}
+    to {left: -120px; background-color: var(--main-bg-accent-color);}
+}
+.tofill {
+	fill: var(--main-txt-color);
+}

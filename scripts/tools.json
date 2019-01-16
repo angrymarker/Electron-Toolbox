@@ -1,0 +1,19 @@
+{
+	"tools": [
+	{
+		"name": "Example 1",
+		"title": "This will be in the title bar",
+		"location": "tools/to/script.js",
+		"category": "cd",
+		"hidden": true,
+		"description": "when someone hovers over the tool this is what they'll see"
+	},
+	{
+		"name": "Example 2",
+		"title": "This will be in the title bar",
+		"location": "tools/to/example2.js",
+		"category": "other",
+		"hidden": true,
+		"description": "when someone hovers over the tool this is what they'll see"
+	}	]
+}
