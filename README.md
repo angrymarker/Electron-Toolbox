@@ -2,20 +2,22 @@
 The Electron-Toolbox is an Electron Boilerplate built for a plug-in inspired toolbox. This is considered in Beta, as this is a tool stripped down from a tool I've created and use on a daily basis. There are breadcrumbs of this everywhere, which lessens the "boilerplate"-ability of this tool.
 
 ## Features
-Custom Windows-10 inspired Toolbar
-Logging - including uncaught exception logging
-Dynamic plugin management - Add/remove plugins by updating a json file
-Themes - Create/edit/select your own themes!
-Debug mode - a mode for admins/devs to hide tools/items not ready for client 
-Notifications - notifications when items are complete, including a notification center logging all notifications
-Settings - User centered settings
-Monitor Page - Find out who is in the tool
-Analytics - Find out how often a tool is ran
+  * Custom Windows-10 inspired Toolbar
+  * Logging - including uncaught exception logging
+  * Dynamic plugin management - Add/remove plugins by updating a json file
+  * Themes - Create/edit/select your own themes!
+  * Debug mode - a mode for admins/devs to hide tools/items not ready for client 
+  * Notifications - notifications when items are complete, including a notification center logging all notifications
+  * Settings - User centered settings
+  * Monitor Page - Find out who is in the tool
+  * Analytics - Find out how often a tool is ran
 
 ## Installation 
 Download source code using your preferred method (git, download the zip, wget, curl, etc...)
 Open the folder containing the source and perform 
+```
   npm install
+```
 
 ## Customization
 Open the html files and update as needed. This example uses "CD Toolbox" as it's name, feel free to update as needed. You can replace the cdtoolbox.png/.ico files with your own logo.
